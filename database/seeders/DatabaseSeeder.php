@@ -19,9 +19,16 @@ final class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        $this->call([
+            MuscleSeeder::class,
+            EquipmentSeeder::class,
+            ExerciseSeeder::class,
+        ]);
+
         User::factory()->create([
             'username' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
     }
 }

@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\API\V1\Exercise\ExerciseController;
 use App\Http\Resources\V1\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,5 @@ Route::middleware('auth:sanctum')->group(function () {
         // Route::delete('/banner', [ProfileController::class, 'deleteBanner']);
     });
 });
+
+Route::get('/exercises', [ExerciseController::class, 'index']);

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
 
     /*
@@ -19,7 +21,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://workout.test'],
+    'allowed_origins' => ['http://workout.test', 'http://api.workout.test'],
 
     'allowed_origins_patterns' => [],
 
