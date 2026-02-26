@@ -10,7 +10,8 @@ final class UserDTO
 {
     public function __construct(
         public string $email,
-        public string $username,
+        public string $firstName,
+        public string $lastName,
         public string $password,
     ) {}
 
@@ -21,7 +22,8 @@ final class UserDTO
 
         return new self(
             email: $data['email'],
-            username: $data['username'],
+            firstName: $data['first_name'],
+            lastName: $data['last_name'],
             password: $data['password']
         );
     }

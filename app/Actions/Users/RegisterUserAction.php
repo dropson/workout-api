@@ -14,7 +14,8 @@ final class RegisterUserAction
     {
 
         return User::create([
-            'username' => $data->username,
+            'first_name' => $data->firstName,
+            'last_name' => $data->lastName,
             'email' => $data->email,
             'password' => Hash::make($data->password),
             'email_verified_at' => now(),
